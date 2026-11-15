@@ -1,10 +1,14 @@
 :root {
+    /* color */
     --bright-blue: #1A9FB2;
     --dark-blue: #063F52;
     --white: #fff;
     --green: #309F47;
     --bright-gray: #F8F8FB;
     --dark-gray: #c3c7c1;
+    /* fonts */
+    --font-secondary: 'Handlee', cursive;
+    --font-primary: 'Nunito', san-serif;
 }
 
 /* ------------------ */
@@ -12,7 +16,7 @@
 /* ------------------ */
 
 body {
-    font-family: 'DynaPuff', sans-serif;
+    font-family: var(--font-primary);
 }
 
 a {
@@ -93,6 +97,8 @@ p {
 .section-header .title {
     color: var(--dark-blue);
     line-height: 2;
+    font-family: var(--font-secondary);
+    font-weight: bold;
 }
 
 /* ------------------ */
@@ -171,11 +177,13 @@ p {
 .introduction .subtitle {
     font-weight: bold;
     font-size: 24px;
+    font-family: var(--font-secondary);
 }
 
 .introduction .title {
     font-weight: bold;
     font-size: 64px;
+    font-family: var(--font-secondary);
 }
 
 .introduction button {
@@ -214,6 +222,7 @@ p {
     color: var(--dark-blue);
     font-weight: bold;
     font-size: 28px;
+    font-family: var(--font-secondary);
 }
 
 .feature-icon {
@@ -247,6 +256,8 @@ p {
 .about-us .title {
     padding: 10px 0;
     color: var(--dark-blue);
+    font-family: var(--font-secondary);
+    font-weight: bold;
 }
 
 .about-us button {
@@ -282,6 +293,12 @@ p {
     text-align: center;
     padding: 10px 0;
     border-bottom: 2px solid var(--dark-gray);
+}
+
+.class-card .content .title {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    color: var(--dark-blue);
 }
 
 .class-card .content p {
@@ -339,6 +356,8 @@ p {
 
 .booking .title {
     color: var(--dark-blue);
+    font-family: var(--font-secondary);
+    font-weight: bold;
     line-height: 2;
 }
 
@@ -356,7 +375,8 @@ p {
     color: var(--white);
     text-align: center;
     line-height: 2;
-    font-weight: normal;
+    font-family: var(--font-secondary);
+    font-weight: bold;
     margin: 0;
 }
 
@@ -388,6 +408,11 @@ p {
     text-align: center;
 }
 
+.blog-card .content h2 {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+}
+
 .blog-card button {
     display: block;
     margin: 30px auto;
@@ -412,6 +437,10 @@ footer .container {
     padding-bottom: 40px;
 }
 
+footer .description {
+    padding-right:15px;
+}
+
 footer .logo-brand {
     font-size: 36px;
     line-height: 2;
@@ -423,6 +452,8 @@ footer .logo-brand i {
 
 footer .title {
     font-size: 28px;
+    font-family: var(--font-secondary);
+    font-weight: bold;
     line-height: 2;
     color: var(--bright-blue);
 }
@@ -463,6 +494,8 @@ footer .copyright {
 
 .contact-type .contact-name {
     font-size: 20px;
+    font-family: var(--font-secondary);
+    font-weight: bold;
 }
 
 .contact-type .contact-detail {
