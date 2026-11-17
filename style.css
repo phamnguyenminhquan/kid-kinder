@@ -105,54 +105,31 @@ p {
 /* header */
 /* ------------------ */
 
-.logo-brand {
-    font-size: 36px;
-    text-align: center;
-}
-
-.toggle-button {
-    display: none;
-}
-
-.main-menu {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    list-style-type: none;
-}
-
-.main-menu>li {
-    padding: 15px 0;
-}
-
-.menu-link {
-    color: var(--dark-blue);
+.navbar-brand {
+    font-size: 48px;
     font-weight: bold;
+    padding-left: 50px;
 }
 
-.current .menu-link,
-.menu-link:hover {
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
     color: var(--bright-blue);
 }
 
-.has-sub-menu {
-    position: relative;
-}
-
-.has-sub-menu:hover>.sub-menu {
+.nav-item:hover .dropdown-menu {
     display: block;
 }
 
-.sub-menu {
-    margin: 0;
-    padding: 10px;
-    background-color: var(--white);
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
+.nav-link {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-blue);
 }
 
 /* ------------------ */
@@ -438,7 +415,7 @@ footer .container {
 }
 
 footer .description {
-    padding-right:15px;
+    padding-right: 15px;
 }
 
 footer .logo-brand {
@@ -516,36 +493,16 @@ footer .copyright {
     /* header */
     /* ------------------ */
 
-    .logo-brand {
-        text-align: left;
-        font-size: 36px;
-        position: relative;
+    .navbar-brand {
+        padding-left: 0;
     }
 
-    .toggle-button {
-        display: inline;
-        font-size: 24px;
-        padding: 0 10px;
-        text-align: right;
-        background-color: var(--bright-gray);
-        color: var(--dark-gray);
-        border: 2px solid var(--bright-gray);
+    .navbar-toggler {
         border-radius: 20px;
-        position: absolute;
-        right: 0;
-        top: 12.5%;
     }
 
-    .main-menu {
-        flex-wrap: wrap;
+    .navbar-nav {
         gap: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .main-menu>li {
-        width: 100%;
-        padding: 5px;
     }
 
     /* ------------------ */
