@@ -24,7 +24,8 @@ a {
     color: inherit;
 }
 
-ul {
+ul,
+li {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,11 +37,6 @@ img {
     max-width: 100%;
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
-
 /* text color */
 
 .bright-blue-text {
@@ -49,10 +45,6 @@ p {
 
 .dark-blue-text {
     color: var(--dark-blue);
-}
-
-.green-text {
-    color: var(--green);
 }
 
 /* button */
@@ -96,7 +88,6 @@ p {
 
 .section-header .title {
     color: var(--dark-blue);
-    line-height: 2;
     font-family: var(--font-secondary);
     font-weight: bold;
 }
@@ -118,7 +109,7 @@ p {
 }
 
 .nav-item .nav-link.active,
-.nav-item .nav-link:hover {
+.nav-item:hover .nav-link {
     color: var(--bright-blue);
 }
 
@@ -174,41 +165,27 @@ p {
     margin-bottom: 60px;
 }
 
-.features .col-md-4 {
-    padding: 15px;
-    min-height: 250px;
-}
-
-.feature-card {
-    box-shadow: 1px 1px 8px 0px #000000;
-    background-color: var(--bright-gray);
-    border-radius: 10px;
-    height: 100%;
-    margin: 0;
-    padding: 20px 0 0 0;
-}
-
-.feature-card .content {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    margin-left: -12px;
-}
-
-.feature-card .title {
-    color: var(--dark-blue);
-    font-weight: bold;
-    font-size: 28px;
-    font-family: var(--font-secondary);
-}
-
-.feature-icon {
-    display: inline-block;
+.features .feature-icon {
+    display: block;
     width: 100%;
-    text-align: center;
     font-size: 48px;
-    margin-top: 15px;
+    padding: 16px 0;
     color: var(--bright-blue);
+}
+
+.features .card {
+    padding: 25px;
+    background-color: var(--bright-gray);
+}
+
+.features .card .card-body {
+    margin-left: -24px;
+}
+
+.features .card .card-title {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    color: var(--dark-blue);
 }
 
 /* about-us */
@@ -241,10 +218,6 @@ p {
     margin-top: 40px;
 }
 
-.checklist {
-    padding-top: 30px;
-}
-
 .checklist .checked-item {
     padding: 10px 5px;
     border-bottom: 2px solid var(--dark-gray);
@@ -252,64 +225,40 @@ p {
 
 /* classes */
 
-.class-card {
-    box-shadow: 1px 1px 8px 0px #000000;
+.classes .card {
     background-color: var(--bright-gray);
-    border-radius: 10px;
-    height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-.class-card img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.class-card .content {
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 2px solid var(--dark-gray);
-}
-
-.class-card .content .title {
-    font-family: var(--font-secondary);
-    font-weight: bold;
-    color: var(--dark-blue);
-}
-
-.class-card .content p {
-    padding: 0 15px;
-}
-
-.class-card button {
+.classes .card .card-text::after {
+    content: '';
     display: block;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
+    border: 1px solid var(--dark-gray);
 }
 
-.detailed-table {
+.info-table {
     border-collapse: collapse;
-    margin: 30px auto;
-    width: 80%;
+    width: 70%;
+    margin: 20px auto 25px;
 }
 
-.detailed-table .table-heading {
-    border-right: 2px solid var(--dark-gray);
-    text-align: right;
-    font-weight: bold;
+.info-table tr {
+    border-bottom: 1px solid var(--dark-gray);
 }
 
-.detailed-table .table-heading,
-.detailed-table .table-data {
-    border-bottom: 2px solid var(--dark-gray);
-    padding: 5px 10px;
-}
-
-.detailed-table tr:last-child .table-heading,
-.detailed-table tr:last-child .table-data {
+.info-table tr:last-child {
     border-bottom: none;
+}
+
+.info-table th {
+    border-right: 1px solid var(--dark-gray);
+    text-align: right;
+    padding: 5px;
+}
+
+.info-table td {
+    text-align: left;
+    padding: 5px;
 }
 
 /* booking */
@@ -335,64 +284,41 @@ p {
     color: var(--dark-blue);
     font-family: var(--font-secondary);
     font-weight: bold;
-    line-height: 2;
 }
 
 .booking .checklist {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .booking .checklist li {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
-.booking .form-title {
+.booking .checklist li:last-child {
+    padding-bottom: 0;
+}
+
+.booking .checklist li::before {
+    font-family: 'Font Awesome 7 Free';
+    content: '\f00c';
+    font-weight: 900;
+    color: var(--green);
+    padding-right: 15px;
+}
+
+.booking .card .card-header {
     background-color: var(--dark-blue);
     color: var(--white);
-    text-align: center;
-    line-height: 2;
     font-family: var(--font-secondary);
+    font-size: 32px;
     font-weight: bold;
-    margin: 0;
 }
 
-.booking .form-field {
+.booking .card .card-body {
     background-color: var(--bright-blue);
-    padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.booking .form-field input,
-.booking .form-field select {
-    padding: 5px;
-    border-radius: 5px;
-}
-
-
-
-/* blog */
-
-.blog-card {
-    height: 100%;
-    background-color: var(--bright-gray);
-}
-
-.blog-card .content {
-    padding: 25px 15px;
-    text-align: center;
-}
-
-.blog-card .content h2 {
-    font-family: var(--font-secondary);
-    font-weight: bold;
-}
-
-.blog-card button {
-    display: block;
-    margin: 30px auto;
+    gap: 15px;
 }
 
 /* ------------------ */
@@ -532,28 +458,6 @@ footer .copyright {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 40px;
-    }
-
-    /* features */
-
-    /* about-us */
-
-    /* classes */
-
-    .classes>.container>.row {
-        gap: 30px;
-    }
-
-    /* booking */
-
-    .booking .form-title {
-        margin-top: 50px;
-    }
-
-    /* blog */
-
-    .blog>.container>.row {
-        gap: 30px;
     }
 
     /* ------------------ */
